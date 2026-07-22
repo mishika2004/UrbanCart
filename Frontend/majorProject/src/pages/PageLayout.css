@@ -1,0 +1,198 @@
+/* ── pages/PageLayout.css  (shared by all info pages) ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --uc-pink:    #e84393;
+  --uc-orange:  #f97316;
+  --uc-dark:    #0f0f0f;
+  --uc-surface: #141414;
+  --uc-border:  #1e1e1e;
+  --uc-muted:   #666;
+  --uc-text:    #c8c4bc;
+  --uc-heading: #f0ece0;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--uc-dark);
+  color: var(--uc-text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── hero banner ── */
+.page-hero {
+  background: var(--uc-surface);
+  border-bottom: 1px solid var(--uc-border);
+  padding: 80px 60px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,67,147,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.page-breadcrumb {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--uc-muted);
+  margin-bottom: 20px;
+}
+.page-breadcrumb a { color: var(--uc-pink); text-decoration: none; }
+.page-breadcrumb a:hover { color: var(--uc-orange); }
+.page-breadcrumb span { margin: 0 8px; }
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  color: var(--uc-heading);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.page-title span { color: var(--uc-pink); }
+
+.page-meta {
+  font-size: 0.76rem;
+  color: var(--uc-muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── content area ── */
+.page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 60px 100px;
+}
+
+.page-section {
+  margin-bottom: 52px;
+  padding-bottom: 52px;
+  border-bottom: 1px solid var(--uc-border);
+  animation: fadeUp 0.5s ease both;
+}
+.page-section:last-child { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-section:nth-child(1) { animation-delay: 0.05s; }
+.page-section:nth-child(2) { animation-delay: 0.12s; }
+.page-section:nth-child(3) { animation-delay: 0.19s; }
+.page-section:nth-child(4) { animation-delay: 0.26s; }
+.page-section:nth-child(5) { animation-delay: 0.33s; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--uc-heading);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.section-number {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background: var(--uc-pink);
+  color: #fff;
+  font-size: 0.65rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.page-section p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--uc-text);
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+.page-section ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 14px 0;
+}
+.page-section ul li {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--uc-text);
+  font-weight: 300;
+  padding: 6px 0 6px 22px;
+  position: relative;
+}
+.page-section ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--uc-pink);
+  font-size: 1rem;
+}
+
+/* highlight box */
+.info-box {
+  background: var(--uc-surface);
+  border-left: 3px solid var(--uc-pink);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 0.86rem;
+  line-height: 1.8;
+  color: var(--uc-muted);
+}
+.info-box strong { color: var(--uc-heading); }
+
+/* contact CTA */
+.contact-cta {
+  background: linear-gradient(135deg, #141414 0%, #1a0d12 100%);
+  border: 1px solid #2a1520;
+  padding: 36px 40px;
+  margin-top: 48px;
+  text-align: center;
+}
+.contact-cta h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--uc-heading);
+  margin-bottom: 8px;
+}
+.contact-cta p { font-size: 0.84rem; color: var(--uc-muted); margin-bottom: 20px; }
+.cta-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--uc-pink);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+.cta-btn:hover { background: var(--uc-orange); }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 60px 20px 40px; }
+  .page-content { padding: 40px 20px 80px; }
+}
