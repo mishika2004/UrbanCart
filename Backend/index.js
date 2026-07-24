@@ -27,7 +27,7 @@ const seedProducts = async () => {
     console.log("Seeding failed", error);
   }
 };
- //seedProducts(); // 
+ //seedProducts(); 
 
 
 
@@ -360,7 +360,7 @@ app.get("/api/ai/similar-products/:id", async (req, res) => {
 });
 
 //const PORT = process.env.PORT || 3000;
-const PORT = 5000;
+const PORT = 8000;
 const startServer = async () => {
   try {
     await initializeDatabase();
