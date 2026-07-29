@@ -1,5 +1,5 @@
 # Urban Cart: MERN Stack E-Commerce Web Application
-![Urban Cart Banner](./image1.png)
+![Urban Cart Banner](./Image1.png)
 
 # Problem Statement
 
@@ -68,26 +68,30 @@ Urban Cart aims to solve these challenges by providing a modern MERN stack based
 urban-cart-niv9.vercel.app
 
 # Project Structure
+```text
 UrbanCart
 │
 ├── Backend
-│   ├── models
+│   ├── ai
 │   ├── data
 │   ├── db
-│   ├── ai
+│   ├── models
 │   ├── scripts
 │   ├── index.js
-│   └── package.json
+│   ├── package.json
+│   └── .env.example
 │
 ├── Frontend
 │   └── majorProject
-│       ├── src
 │       ├── public
+│       ├── src
 │       ├── package.json
 │       └── vite.config.js
 │
+├── Banner.png.png
+├── image1.png
 └── README.md
-
+```
 
 # Key Highlights
 
