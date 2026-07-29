@@ -1,66 +1,109 @@
-# Major Project Setup
+# Urban Cart: MERN Stack E-Commerce Web Application
+![Urban Cart Banner](./image1.png)
 
-This project has two separate apps:
+# Problem Statement
 
-- `Backend`: Express + MongoDB API
-- `Frontend/majorProject`: React + Vite frontend
+In today's online shopping experience, users often struggle to quickly find relevant products, manage their shopping efficiently, and receive personalized assistance while browsing. Traditional e-commerce platforms also lack intelligent features that enhance user interaction and improve the overall shopping experience.
 
-## Prerequisites
+Urban Cart aims to solve these challenges by providing a modern MERN stack based e-commerce platform with an intuitive interface, efficient product management, and AI-powered shopping assistance.
 
-- Node.js 20 or newer
-- npm 10 or newer
-- A reachable MongoDB database
+# Features
+ Browse products by category
+ Search and filter products
+ Add and manage Wishlist
+ Shopping Cart functionality
+ Address Management
+ Order Placement
+ User Authentication (JWT & bcrypt)
+ Fully Responsive UI
+ AI-Powered Product Recommendation System
+ AI-Powered Customer Support Chatbot
 
-## Backend setup
 
-1. Open `Backend`.
-2. Create `.env` from `.env.example`.
-3. Set `MONGODB` to your MongoDB connection string.
-4. Optionally change `PORT` if `3000` is already in use.
-5. Install dependencies:
+# System Architecture
 
-   ```bash
-   npm install
-   ```
+![System Architecture](./systemArchitecture.png)
 
-6. Seed products once:
 
-   ```bash
-   npm run seed
-   ```
+ # Tech Stack
+   ## Frontend
+   React.js
+   Bootstrap
+   React Router
+   Context API
+   
+  ## Backend
+   Node.js
+   Express.js
+   
+  ## Database
+   MongoDB
+   Mongoose
 
-7. Start the backend:
+  ## Authentication
+   JWT (JSON Web Token)
+   bcrypt
+   
+  ## AI Integration
+   Groq API
 
-   ```bash
-   npm run dev
-   ```
 
-## Frontend setup
+# 📸 Project Screenshots
 
-1. Open `Frontend/majorProject`.
-2. Create `.env` from `.env.example`.
-3. Set `VITE_API_BASE_URL` to your backend URL. For local development use `http://localhost:3000`.
-4. Install dependencies:
+## 🏠 Home Page
 
-   ```bash
-   npm install
-   ```
+![Home Page](./Banner.png.png)
 
-5. Start the frontend:
+## 🛍 Products Page
 
-   ```bash
-   npm run dev
-   ```
+![Products](./image2.png)
 
-## Run order
+## 🤖 AI Shopping Assistant
 
-1. Start the backend first.
-2. Start the frontend.
-3. Open the Vite URL shown in the terminal, usually `http://localhost:5173`.
+![AI Chatbot](./image3.png)
 
-## Notes
 
-- Product data is loaded into MongoDB by `npm run seed`.
-- The frontend now reads the backend base URL from `VITE_API_BASE_URL`, so you do not need to edit source files when the backend host changes.
-- On Windows, reopen the terminal after installing Node.js so `node` and `npm` are added to PATH.
-- If PowerShell blocks `npm` with an execution-policy error, use `npm.cmd` instead or run the commands from Command Prompt.
+
+# Live Demo
+urban-cart-niv9.vercel.app
+
+# Project Structure
+UrbanCart
+│
+├── Backend
+│   ├── models
+│   ├── data
+│   ├── db
+│   ├── ai
+│   ├── scripts
+│   ├── index.js
+│   └── package.json
+│
+├── Frontend
+│   └── majorProject
+│       ├── src
+│       ├── public
+│       ├── package.json
+│       └── vite.config.js
+│
+└── README.md
+
+
+# Key Highlights
+
+- MERN Stack Architecture
+- RESTful API Development
+- MongoDB Atlas Integration
+- Secure JWT Authentication
+- AI-Powered Shopping Experience
+- Responsive UI for Desktop and Mobile
+- Context API State Management
+- Modular Project Structure
+
+# Connect With Me
+- 💼 **LinkedIn:** https://www.linkedin.com/in/mishikamendiratta/
+- 💻 **GitHub:** https://github.com/mishika2004
+- 📧 **Email:** mishikamendiratta@gmail.com
+
+# ⭐ Show Your Support
+If you found this project useful or interesting, please consider giving it a **⭐ Star** on GitHub.
